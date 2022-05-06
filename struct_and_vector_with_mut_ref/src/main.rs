@@ -36,6 +36,10 @@ fn main() {
     let mut p5 = Point { p: 2 };
     let mut p6 = Point { p: 3 };
     let pv2 = vec![&mut p4, &mut p5, &mut p6];
+    let mut p7 = Point { p: 1 };
+    let mut p8 = Point { p: 2 };
+    let mut p9 = Point { p: 3 };
+    let mut pv3 = vec![&p7, &p8, &p9];
 
     println!("3. {:?}", pv);
     println!("4. {:?}", pv2);
@@ -43,9 +47,10 @@ fn main() {
     // This works.
     pv[1].p = 1000;
     println!("5. {:?}", pv);
-
     // This doesn't work.
     // pv2[1].p = 1000;
+    //This doesn't work.
+    // pv3[1].p = 100;
 
     // This works.
     let pv_1 = &mut pv[1];
